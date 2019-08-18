@@ -18,6 +18,6 @@ public class GameController {
             printer.printBoard(gameState.getBoard());
             gameState.changeTurn();
         }
-        System.out.println("Koniec gry");
+        System.out.println("The End");
     }
 }

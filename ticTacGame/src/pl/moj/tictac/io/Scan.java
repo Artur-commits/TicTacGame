@@ -8,15 +8,15 @@ public class Scan {
     Scanner scan = new Scanner(System.in);
 
     public Integer getFieldNumber() {
+        Integer fieldNo = null;
         try {
-            return scan.nextInt();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            System.out.println("Wprowadzony znak nie jest liczba całkowitą");
-        } finally {
-            return scan.nextInt();
-
+            fieldNo = scan.nextInt();
+        } catch (Exception e){
+            e.printStackTrace();
+            System.out.println("Number out of range 1-9");
         }
+        return fieldNo;
+
 
     }
 

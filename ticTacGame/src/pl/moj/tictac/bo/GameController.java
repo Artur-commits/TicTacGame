@@ -16,8 +16,12 @@ public class GameController {
             printer.printBoard(gameState.getBoard());
             gameState.setField(scan.getFieldNumber(), scan.getFieldNumber());
             printer.printBoard(gameState.getBoard());
+            if (gameState.isGameEnded()) {
+                printer.printWinner(gameState.getTurn());
+                break;
+            }
             gameState.changeTurn();
         }
-        System.out.println("The End");
+        printer.printEnd();
     }
 }

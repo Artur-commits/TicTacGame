@@ -28,6 +28,12 @@ public class GameState {
         board.setFieldState(fieldNo, rowNo, turn.getSign());
     }
 
+    public  boolean isGameEnded(){
+        return board.isRowMatchFieldState(turn.getSign()) ||
+                board.isColMatchFieldState(turn.getSign());
+
+    }
+
 
 
 
